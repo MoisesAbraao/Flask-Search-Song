@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Song</title>
+        <meta charset="utf-8">
+        <style>
+            .Text{
+                width: 200px;
+                min-height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="{{ url_for('get_song')}}" method="POST">
+            <label>Nome do Artista ou Grupo</label>
+            <input type="text" name="banda">
+            <label>Nome da canção</label>
+            <input type="text" name="cancao">
+            <input type="submit" value="buscar">
+        </form>
+        <div class="Text">
+            <p>{{song}}</p>
+        </div>
+    </body>
+</html>
