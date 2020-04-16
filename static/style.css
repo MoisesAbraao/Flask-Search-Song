@@ -1,0 +1,44 @@
+*{
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.NavBar {
+    width: 100%;
+    height: 60px;
+    /* position: fixed; */
+    background-color: rgb(32, 60, 72);
+    color: #fff;
+}
+
+.NavBar h3 {
+    text-align: start;
+    padding: 20px;
+}
+
+.Form {
+    margin: 10px;
+    color: rgb(32, 60, 72);
+}
+
+.Form #button {
+    color: #fff;
+    background-color: rgb(32, 60, 72);
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+.Lyric{
+    width: 200px;
+    min-height: 100%;
+    text-align: start;
+    color: rgb(32, 60, 72);
+}
+
+.Lyric p {
+    font-size: 20px;
+}

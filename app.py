@@ -1,3 +1,4 @@
+#encoding: utf8
 from flask import Flask, render_template, request, url_for
 from vagalume import lyrics
 
@@ -16,7 +17,9 @@ def get_song():
         if banda and cancao:
             resultado = lyrics.find(banda, cancao)
             song = (resultado.song.lyric)
-    return render_template("index.html", song=song)
+        else:
+            song = "Por favor informe os valores dos campos!"
+    return render_template("index.html", song=song, cancao=cancao)
 
 if __name__ == "__main__":
     app.run(debug=True)

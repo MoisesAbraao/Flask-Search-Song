@@ -3,22 +3,23 @@
     <head>
         <title>Search Song</title>
         <meta charset="utf-8">
-        <style>
-            .Text{
-                width: 200px;
-                min-height: 100%;
-            }
-        </style>
+        <link rel="stylesheet" href="../static/style.css">
     </head>
     <body>
-        <form action="{{ url_for('get_song')}}" method="POST">
-            <label>Nome do Artista ou Grupo</label>
-            <input type="text" name="banda">
-            <label>Nome da canção</label>
-            <input type="text" name="cancao">
-            <input type="submit" value="buscar">
-        </form>
-        <div class="Text">
+        <div class="NavBar">
+            <h3>Search Song</h3>
+        </div>
+        <div class="Form">
+            <form action="{{ url_for('get_song')}}" method="POST">
+                <label>Nome do Artista ou Grupo</label>
+                <input type="text" name="banda">
+                <label>Nome da canção</label>
+                <input type="text" name="cancao">
+                <input type="submit" id="button" value="buscar">
+            </form>
+        </div>
+        <div class="Lyric">
+            <h2>{{cancao}}</h2>
             <p>{{song}}</p>
         </div>
     </body>
